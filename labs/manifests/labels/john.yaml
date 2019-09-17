@@ -1,0 +1,15 @@
+# originally from http://kubernetesbyexample.com/labels/
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  labels:
+    env: "john"
+    owner: beatle
+spec:
+  containers:
+  - name: sise
+    image: mhausenblas/simpleservice:0.5.0
+    ports:
+    - containerPort: 9876

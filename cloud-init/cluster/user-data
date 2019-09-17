@@ -1,0 +1,15 @@
+#cloud-config
+ 
+debug: True
+disable_root: False
+ssh_deletekeys: False
+ssh_pwauth: True
+ssh_authorized_keys:
+  - ssh-rsa __admin_key_goes_here__
+ 
+hostname: worker13
+
+suse_caasp:
+  role: cluster
+  admin_node: 192.168.111.99
+
