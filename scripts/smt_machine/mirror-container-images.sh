@@ -62,5 +62,5 @@ echo "-------------------------------------------------------"
 for IMAGE in ${CONTAINER_LIST}
 do
   echo "-${IMAGE}"
-  skopeo copy docker://${IMAGE} docker://${REGISTRY}:5000/${IMAGE}
+  skopeo copy --dest-tls-verify=false docker://${IMAGE} docker://${REGISTRY}:5000/${IMAGE}
 done
