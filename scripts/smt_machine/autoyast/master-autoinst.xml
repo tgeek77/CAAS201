@@ -1,0 +1,1025 @@
+<?xml version="1.0"?>
+<!DOCTYPE profile>
+<profile xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns">
+  <scripts>
+   <init-scripts config:type="list">
+    <script>
+      <debug config:type="boolean">false</debug>
+      <filename>set_authorized_keys.sh</filename>
+      <location><![CDATA[]]></location>
+      <source><![CDATA[#!/bin/sh
+mkdir -p /root/.ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDOo2oZvop3Uj7G9VYUYJ02hpD75ookCjmPtJe7fjc2Ot6pBf/cVM1HasMiP5hLHwjDkR0KXVDPp7uLzZFsjvFkscrUkHTNDTptJcuUiP9dR9aH8SvI4X7rMTjvjGqMkj9jGm2lBb0foxoxQ1HJbGws8Cun8KnlZ5LEitc5xsuVK4iNE1bgKcgXI50TY8BQFc2F18vK56L5GAULctZVrGVM0E6igwerHYCmGbvJSkEAPPi7O/EDc4OED9dSGXSh3r98jAAwq6+hooapM2lWv33qslB/iQUzIMDs7Fyk5PnDbhfHP+kj/NIXwJppNM/ReJUNHY+tFE1UdeK8VTftYYh7cdTUQypERvegyuzfpZLCbu8IMXcY4l5CpmNnzuIgvGBoxSeAHYDd9TIqk7q2eUrJ5ESBt0ncXhKFhEs66+nVFi77lJapNfRFS3lQ6YAjdvJLQ/P25HCerFbhPM5XdFpqYzIbjMiqN3qaHRJmxe8AvQyjTYzKeSmgpdiq4r1n70ahYeQ3QKSwQrNgMYbaI4MOLQ38H7acpUPv5N+xy5C65uEqi4yHWufUDgOIwVjmNgjHQ268oCqUDLHQP8W9WWqH9NDbjG4WUMt871jZ5EraEs6lO+oT9TXcK7cIIgCRqhk+9dQnv8dcxH9Vgk6cDlpxdHq5Q/2UFx3XHb50b1mC1Q== root@admin
+" > /root/.ssh/authorized_keys
+echo "-----BEGIN RSA PRIVATE KEY-----
+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
+-----END RSA PRIVATE KEY-----
+" > /root/.ssh/id_rsa
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDOo2oZvop3Uj7G9VYUYJ02hpD75ookCjmPtJe7fjc2Ot6pBf/cVM1HasMiP5hLHwjDkR0KXVDPp7uLzZFsjvFkscrUkHTNDTptJcuUiP9dR9aH8SvI4X7rMTjvjGqMkj9jGm2lBb0foxoxQ1HJbGws8Cun8KnlZ5LEitc5xsuVK4iNE1bgKcgXI50TY8BQFc2F18vK56L5GAULctZVrGVM0E6igwerHYCmGbvJSkEAPPi7O/EDc4OED9dSGXSh3r98jAAwq6+hooapM2lWv33qslB/iQUzIMDs7Fyk5PnDbhfHP+kj/NIXwJppNM/ReJUNHY+tFE1UdeK8VTftYYh7cdTUQypERvegyuzfpZLCbu8IMXcY4l5CpmNnzuIgvGBoxSeAHYDd9TIqk7q2eUrJ5ESBt0ncXhKFhEs66+nVFi77lJapNfRFS3lQ6YAjdvJLQ/P25HCerFbhPM5XdFpqYzIbjMiqN3qaHRJmxe8AvQyjTYzKeSmgpdiq4r1n70ahYeQ3QKSwQrNgMYbaI4MOLQ38H7acpUPv5N+xy5C65uEqi4yHWufUDgOIwVjmNgjHQ268oCqUDLHQP8W9WWqH9NDbjG4WUMt871jZ5EraEs6lO+oT9TXcK7cIIgCRqhk+9dQnv8dcxH9Vgk6cDlpxdHq5Q/2UFx3XHb50b1mC1Q== root@admin
+" > /root/.ssh/id_rsa.pub
+chmod -R 600 /root/.ssh]]>
+
+      </source>
+    </script>
+   </init-scripts>
+  </scripts>
+  <add-on>
+    <add_on_products config:type="list">
+      <listentry>
+        <media_url><![CDATA[http://smt.example.com/repo/SUSE/Products/SLE-Module-Containers/15-SP1/x86_64/product?credentials=SMT-http_smt_example_com]]></media_url>
+        <product>sle-module-containers</product>
+        <product_dir>/</product_dir>
+      </listentry>
+      <listentry>
+        <media_url><![CDATA[http://smt.example.com/repo/SUSE/Products/SLE-Module-Basesystem/15-SP1/x86_64/product?credentials=SMT-http_smt_example_com]]></media_url>
+        <product>sle-module-basesystem</product>
+        <product_dir>/</product_dir>
+      </listentry>
+      <listentry>
+        <media_url><![CDATA[http://smt.example.com/repo/SUSE/Products/SUSE-CAASP/4.0/x86_64/product?credentials=SMT-http_smt_example_com]]></media_url>
+        <product>caasp</product>
+        <product_dir>/</product_dir>
+      </listentry>
+    </add_on_products>
+  </add-on>
+  <bootloader>
+    <global>
+      <append>load_ramdisk=1 quiet load_ramdisk=1 quiet mitigations=auto crashkernel=173M,high</append>
+      <cpu_mitigations>auto</cpu_mitigations>
+      <gfxmode>auto</gfxmode>
+      <hiddenmenu>false</hiddenmenu>
+      <os_prober>false</os_prober>
+      <terminal>gfxterm</terminal>
+      <timeout config:type="integer">8</timeout>
+      <trusted_grub>false</trusted_grub>
+      <xen_kernel_append>vga=gfx-1024x768x16 vga=gfx-1024x768x16 crashkernel=173M\&lt;4G</xen_kernel_append>
+    </global>
+    <loader_type>grub2</loader_type>
+  </bootloader>
+  <deploy_image>
+    <image_installation config:type="boolean">false</image_installation>
+  </deploy_image>
+  <general>
+    <ask-list config:type="list"/>
+    <mode>
+      <confirm config:type="boolean">false</confirm>
+    </mode>
+    <proposals config:type="list"/>
+    <signature-handling>
+      <accept_file_without_checksum config:type="boolean">true</accept_file_without_checksum>
+      <accept_non_trusted_gpg_key config:type="boolean">true</accept_non_trusted_gpg_key>
+      <accept_unknown_gpg_key config:type="boolean">true</accept_unknown_gpg_key>
+      <accept_unsigned_file config:type="boolean">true</accept_unsigned_file>
+      <accept_verification_failed config:type="boolean">false</accept_verification_failed>
+      <import_gpg_key config:type="boolean">true</import_gpg_key>
+    </signature-handling>
+    <storage>
+      <start_multipath config:type="boolean">false</start_multipath>
+    </storage>
+  </general>
+  <groups config:type="list">
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>100</gid>
+      <group_password>x</group_password>
+      <groupname>users</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>484</gid>
+      <group_password>x</group_password>
+      <groupname>systemd-journal</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>490</gid>
+      <group_password>x</group_password>
+      <groupname>disk</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>493</gid>
+      <group_password>x</group_password>
+      <groupname>audio</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>483</gid>
+      <group_password>x</group_password>
+      <groupname>systemd-timesync</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>59</gid>
+      <group_password>x</group_password>
+      <groupname>maildrop</groupname>
+      <userlist>postfix</userlist>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>2</gid>
+      <group_password>x</group_password>
+      <groupname>daemon</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>496</gid>
+      <group_password>x</group_password>
+      <groupname>kmem</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>481</gid>
+      <group_password>x</group_password>
+      <groupname>chrony</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>482</gid>
+      <group_password>x</group_password>
+      <groupname>systemd-coredump</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>5</gid>
+      <group_password>x</group_password>
+      <groupname>tty</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>485</gid>
+      <group_password>x</group_password>
+      <groupname>video</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>15</gid>
+      <group_password>x</group_password>
+      <groupname>shadow</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>479</gid>
+      <group_password>x</group_password>
+      <groupname>sshd</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>497</gid>
+      <group_password>x</group_password>
+      <groupname>wheel</groupname>
+      <userlist>tux</userlist>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>498</gid>
+      <group_password>!</group_password>
+      <groupname>mail</groupname>
+      <userlist>postfix</userlist>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>499</gid>
+      <group_password>x</group_password>
+      <groupname>messagebus</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>65534</gid>
+      <group_password>x</group_password>
+      <groupname>nobody</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>65533</gid>
+      <group_password>x</group_password>
+      <groupname>nogroup</groupname>
+      <userlist>nobody</userlist>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>495</gid>
+      <group_password>x</group_password>
+      <groupname>lock</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>0</gid>
+      <group_password>x</group_password>
+      <groupname>root</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>491</gid>
+      <group_password>x</group_password>
+      <groupname>dialout</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>489</gid>
+      <group_password>x</group_password>
+      <groupname>input</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>488</gid>
+      <group_password>x</group_password>
+      <groupname>kvm</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>51</gid>
+      <group_password>x</group_password>
+      <groupname>postfix</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>478</gid>
+      <group_password>x</group_password>
+      <groupname>kube</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>480</gid>
+      <group_password>x</group_password>
+      <groupname>polkitd</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>1</gid>
+      <group_password>x</group_password>
+      <groupname>bin</groupname>
+      <userlist>daemon</userlist>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>492</gid>
+      <group_password>x</group_password>
+      <groupname>cdrom</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>487</gid>
+      <group_password>x</group_password>
+      <groupname>lp</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>494</gid>
+      <group_password>x</group_password>
+      <groupname>utmp</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>486</gid>
+      <group_password>x</group_password>
+      <groupname>tape</groupname>
+      <userlist/>
+    </group>
+    <group>
+      <encrypted config:type="boolean">true</encrypted>
+      <gid>42</gid>
+      <group_password>x</group_password>
+      <groupname>trusted</groupname>
+      <userlist/>
+    </group>
+  </groups>
+  <host>
+    <hosts config:type="list">
+      <hosts_entry>
+        <host_address>127.0.0.1</host_address>
+        <names config:type="list">
+          <name>localhost</name>
+        </names>
+      </hosts_entry>
+      <hosts_entry>
+        <host_address>::1</host_address>
+        <names config:type="list">
+          <name>localhost ipv6-localhost ipv6-loopback</name>
+        </names>
+      </hosts_entry>
+      <hosts_entry>
+        <host_address>fe00::0</host_address>
+        <names config:type="list">
+          <name>ipv6-localnet</name>
+        </names>
+      </hosts_entry>
+      <hosts_entry>
+        <host_address>ff00::0</host_address>
+        <names config:type="list">
+          <name>ipv6-mcastprefix</name>
+        </names>
+      </hosts_entry>
+      <hosts_entry>
+        <host_address>ff02::1</host_address>
+        <names config:type="list">
+          <name>ipv6-allnodes</name>
+        </names>
+      </hosts_entry>
+      <hosts_entry>
+        <host_address>ff02::2</host_address>
+        <names config:type="list">
+          <name>ipv6-allrouters</name>
+        </names>
+      </hosts_entry>
+      <hosts_entry>
+        <host_address>ff02::3</host_address>
+        <names config:type="list">
+          <name>ipv6-allhosts</name>
+        </names>
+      </hosts_entry>
+    </hosts>
+  </host>
+  <kdump>
+    <add_crash_kernel config:type="boolean">true</add_crash_kernel>
+    <crash_kernel>173M,high</crash_kernel>
+    <crash_xen_kernel>173M\&lt;4G</crash_xen_kernel>
+    <general>
+      <KDUMPTOOL_FLAGS/>
+      <KDUMP_COMMANDLINE/>
+      <KDUMP_COMMANDLINE_APPEND/>
+      <KDUMP_CONTINUE_ON_ERROR>true</KDUMP_CONTINUE_ON_ERROR>
+      <KDUMP_COPY_KERNEL>yes</KDUMP_COPY_KERNEL>
+      <KDUMP_CPUS/>
+      <KDUMP_DUMPFORMAT>lzo</KDUMP_DUMPFORMAT>
+      <KDUMP_DUMPLEVEL>31</KDUMP_DUMPLEVEL>
+      <KDUMP_FREE_DISK_SIZE>64</KDUMP_FREE_DISK_SIZE>
+      <KDUMP_HOST_KEY/>
+      <KDUMP_IMMEDIATE_REBOOT>yes</KDUMP_IMMEDIATE_REBOOT>
+      <KDUMP_KEEP_OLD_DUMPS>5</KDUMP_KEEP_OLD_DUMPS>
+      <KDUMP_KERNELVER/>
+      <KDUMP_NETCONFIG>auto</KDUMP_NETCONFIG>
+      <KDUMP_NET_TIMEOUT>30</KDUMP_NET_TIMEOUT>
+      <KDUMP_NOTIFICATION_CC/>
+      <KDUMP_NOTIFICATION_TO/>
+      <KDUMP_POSTSCRIPT/>
+      <KDUMP_PRESCRIPT/>
+      <KDUMP_REQUIRED_PROGRAMS/>
+      <KDUMP_SAVEDIR>/var/crash</KDUMP_SAVEDIR>
+      <KDUMP_SMTP_PASSWORD/>
+      <KDUMP_SMTP_SERVER/>
+      <KDUMP_SMTP_USER/>
+      <KDUMP_TRANSFER/>
+      <KDUMP_VERBOSE>3</KDUMP_VERBOSE>
+      <KEXEC_OPTIONS/>
+    </general>
+  </kdump>
+  <keyboard>
+    <keymap>english-us</keymap>
+  </keyboard>
+  <language>
+    <language>en_US</language>
+    <languages>en_US</languages>
+  </language>
+  <login_settings/>
+  <networking>
+    <dhcp_options>
+      <dhclient_client_id/>
+      <dhclient_hostname_option>AUTO</dhclient_hostname_option>
+    </dhcp_options>
+    <dns>
+      <dhcp_hostname config:type="boolean">false</dhcp_hostname>
+      <domain>example.com</domain>
+      <resolv_conf_policy>auto</resolv_conf_policy>
+      <write_hostname config:type="boolean">false</write_hostname>
+    </dns>
+    <interfaces config:type="list">
+      <interface>
+        <bootproto>dhcp</bootproto>
+        <device>eth0</device>
+        <startmode>auto</startmode>
+      </interface>
+      <interface>
+        <bootproto>static</bootproto>
+        <device>lo</device>
+        <firewall>no</firewall>
+        <ipaddr>127.0.0.1</ipaddr>
+        <netmask>255.0.0.0</netmask>
+        <network>127.0.0.0</network>
+        <prefixlen>8</prefixlen>
+        <startmode>nfsroot</startmode>
+        <usercontrol>no</usercontrol>
+      </interface>
+    </interfaces>
+    <ipv6 config:type="boolean">true</ipv6>
+    <keep_install_network config:type="boolean">true</keep_install_network>
+    <managed config:type="boolean">false</managed>
+    <net-udev config:type="list">
+      <rule>
+        <name>eth0</name>
+        <rule>KERNELS</rule>
+        <value>0000:00:03.0</value>
+      </rule>
+    </net-udev>
+    <routing>
+      <ipv4_forward config:type="boolean">true</ipv4_forward>
+      <ipv6_forward config:type="boolean">true</ipv6_forward>
+    </routing>
+  </networking>
+  <ntp-client>
+    <ntp_policy>auto</ntp_policy>
+    <ntp_servers config:type="list"/>
+    <ntp_sync>manual</ntp_sync>
+  </ntp-client>
+  <partitioning config:type="list">
+    <drive>
+      <device>/dev/vda</device>
+      <disklabel>gpt</disklabel>
+      <enable_snapshots config:type="boolean">true</enable_snapshots>
+      <initialize config:type="boolean">false</initialize>
+      <partitions config:type="list">
+        <partition>
+          <create config:type="boolean">true</create>
+          <format config:type="boolean">false</format>
+          <partition_id config:type="integer">263</partition_id>
+          <partition_nr config:type="integer">1</partition_nr>
+          <resize config:type="boolean">false</resize>
+          <size>8388608</size>
+        </partition>
+        <partition>
+          <create config:type="boolean">true</create>
+          <create_subvolumes config:type="boolean">true</create_subvolumes>
+          <filesystem config:type="symbol">btrfs</filesystem>
+          <format config:type="boolean">true</format>
+          <mount>/</mount>
+          <mountby config:type="symbol">uuid</mountby>
+          <partition_id config:type="integer">131</partition_id>
+          <partition_nr config:type="integer">2</partition_nr>
+          <resize config:type="boolean">false</resize>
+          <size>42940218880</size>
+          <subvolumes config:type="list">
+            <subvolume>
+              <copy_on_write config:type="boolean">false</copy_on_write>
+              <path>var</path>
+            </subvolume>
+            <subvolume>
+              <copy_on_write config:type="boolean">true</copy_on_write>
+              <path>boot/grub2/x86_64-efi</path>
+            </subvolume>
+            <subvolume>
+              <copy_on_write config:type="boolean">true</copy_on_write>
+              <path>boot/grub2/i386-pc</path>
+            </subvolume>
+            <subvolume>
+              <copy_on_write config:type="boolean">true</copy_on_write>
+              <path>usr/local</path>
+            </subvolume>
+            <subvolume>
+              <copy_on_write config:type="boolean">true</copy_on_write>
+              <path>tmp</path>
+            </subvolume>
+            <subvolume>
+              <copy_on_write config:type="boolean">true</copy_on_write>
+              <path>srv</path>
+            </subvolume>
+            <subvolume>
+              <copy_on_write config:type="boolean">true</copy_on_write>
+              <path>root</path>
+            </subvolume>
+            <subvolume>
+              <copy_on_write config:type="boolean">true</copy_on_write>
+              <path>opt</path>
+            </subvolume>
+            <subvolume>
+              <copy_on_write config:type="boolean">true</copy_on_write>
+              <path>home</path>
+            </subvolume>
+          </subvolumes>
+          <subvolumes_prefix><![CDATA[@]]></subvolumes_prefix>
+        </partition>
+      </partitions>
+      <type config:type="symbol">CT_DISK</type>
+      <use>all</use>
+    </drive>
+  </partitioning>
+  <proxy>
+    <enabled config:type="boolean">false</enabled>
+    <ftp_proxy/>
+    <http_proxy/>
+    <https_proxy/>
+    <no_proxy>localhost,127.0.0.1</no_proxy>
+    <proxy_password/>
+    <proxy_user/>
+  </proxy>
+  <report>
+    <errors>
+      <log config:type="boolean">true</log>
+      <show config:type="boolean">true</show>
+      <timeout config:type="integer">0</timeout>
+    </errors>
+    <messages>
+      <log config:type="boolean">true</log>
+      <show config:type="boolean">true</show>
+      <timeout config:type="integer">0</timeout>
+    </messages>
+    <warnings>
+      <log config:type="boolean">true</log>
+      <show config:type="boolean">true</show>
+      <timeout config:type="integer">0</timeout>
+    </warnings>
+    <yesno_messages>
+      <log config:type="boolean">true</log>
+      <show config:type="boolean">true</show>
+      <timeout config:type="integer">0</timeout>
+    </yesno_messages>
+  </report>
+  <services-manager>
+    <default_target>multi-user</default_target>
+    <services>
+      <disable config:type="list"/>
+      <enable config:type="list">
+        <service>YaST2-Firstboot</service>
+        <service>YaST2-Second-Stage</service>
+        <service>apparmor</service>
+        <service>auditd</service>
+        <service>btrfsmaintenance-refresh</service>
+        <service>cron</service>
+        <service>wickedd-auto4</service>
+        <service>wickedd-dhcp4</service>
+        <service>wickedd-dhcp6</service>
+        <service>wickedd-nanny</service>
+        <service>getty@tty1</service>
+        <service>haveged</service>
+        <service>irqbalance</service>
+        <service>issue-generator</service>
+        <service>kbdsettings</service>
+        <service>kdump</service>
+        <service>kdump-early</service>
+        <service>wicked</service>
+        <service>postfix</service>
+        <service>purge-kernels</service>
+        <service>rollback</service>
+        <service>sshd</service>
+      </enable>
+      <on_demand config:type="list"/>
+    </services>
+  </services-manager>
+  <software>
+    <image/>
+    <install_recommended config:type="boolean">true</install_recommended>
+    <instsource/>
+    <packages config:type="list">
+      <package>yast2-users</package>
+      <package>yast2-services-manager</package>
+      <package>yast2-proxy</package>
+      <package>yast2-ntp-client</package>
+      <package>yast2-network</package>
+      <package>yast2-kdump</package>
+      <package>yast2-country</package>
+      <package>yast2-bootloader</package>
+      <package>yast2-add-on</package>
+      <package>yast2</package>
+      <package>wicked</package>
+      <package>vim</package>
+      <package>sudo</package>
+      <package>snapper</package>
+      <package>sles-release</package>
+      <package>sle-module-containers-release</package>
+      <package>sle-module-basesystem-release</package>
+      <package>openssh</package>
+      <package>numactl</package>
+      <package>less</package>
+      <package>kexec-tools</package>
+      <package>kdump</package>
+      <package>irqbalance</package>
+      <package>grub2</package>
+      <package>glibc</package>
+      <package>fping</package>
+      <package>e2fsprogs</package>
+      <package>caasp-release</package>
+      <package>btrfsprogs</package>
+      <package>autoyast2-installation</package>
+      <package>autoyast2</package>
+    </packages>
+    <patterns config:type="list">
+      <pattern>SUSE-CaaSP-Management</pattern>
+      <pattern>SUSE-CaaSP-Node</pattern>
+      <pattern>base</pattern>
+      <pattern>basesystem</pattern>
+      <pattern>minimal_base</pattern>
+    </patterns>
+    <products config:type="list">
+      <product>SLES</product>
+    </products>
+  </software>
+  <ssh_import>
+    <copy_config config:type="boolean">false</copy_config>
+    <import config:type="boolean">false</import>
+  </ssh_import>
+  <timezone>
+    <hwclock>UTC</hwclock>
+    <timezone>Europe/Prague</timezone>
+  </timezone>
+  <user_defaults>
+    <expire/>
+    <group>100</group>
+    <groups/>
+    <home>/home</home>
+    <inactive>-1</inactive>
+    <no_groups config:type="boolean">true</no_groups>
+    <shell>/bin/bash</shell>
+    <skel>/etc/skel</skel>
+    <umask>022</umask>
+  </user_defaults>
+  <users config:type="list">
+    <user>
+      <authorized_keys config:type="list"/>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>tux</fullname>
+      <gid>100</gid>
+      <home>/home/tux</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/bin/bash</shell>
+      <uid>1000</uid>
+      <user_password>$6$tuqUW5QXqMyv$i3jsxS57ql1AAdEsOOeaH5G4qcYwDTxfBnUnekMPMFNuAlhfG1eC2EhVDWduRVCzqMMTmlqaO.X0snP0SB9h..</user_password>
+      <username>tux</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>Postfix Daemon</fullname>
+      <gid>51</gid>
+      <home>/var/spool/postfix</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/bin/false</shell>
+      <uid>51</uid>
+      <user_password>!</user_password>
+      <username>postfix</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>Chrony Daemon</fullname>
+      <gid>481</gid>
+      <home>/var/lib/chrony</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max/>
+        <min/>
+        <warn/>
+      </password_settings>
+      <shell>/bin/false</shell>
+      <uid>479</uid>
+      <user_password>!</user_password>
+      <username>chrony</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>systemd Core Dumper</fullname>
+      <gid>482</gid>
+      <home>/</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>482</uid>
+      <user_password>!!</user_password>
+      <username>systemd-coredump</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>User for D-Bus</fullname>
+      <gid>499</gid>
+      <home>/run/dbus</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max/>
+        <min/>
+        <warn/>
+      </password_settings>
+      <shell>/usr/bin/false</shell>
+      <uid>499</uid>
+      <user_password>!</user_password>
+      <username>messagebus</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>Mailer daemon</fullname>
+      <gid>498</gid>
+      <home>/var/spool/clientmqueue</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>498</uid>
+      <user_password>!</user_password>
+      <username>mail</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>Printing daemon</fullname>
+      <gid>487</gid>
+      <home>/var/spool/lpd</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>497</uid>
+      <user_password>!</user_password>
+      <username>lp</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>SSH daemon</fullname>
+      <gid>479</gid>
+      <home>/var/lib/sshd</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max/>
+        <min/>
+        <warn/>
+      </password_settings>
+      <shell>/bin/false</shell>
+      <uid>477</uid>
+      <user_password>!</user_password>
+      <username>sshd</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>Kubernetes user</fullname>
+      <gid>478</gid>
+      <home>/</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max/>
+        <min/>
+        <warn/>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>476</uid>
+      <user_password>!</user_password>
+      <username>kube</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>User for polkitd</fullname>
+      <gid>480</gid>
+      <home>/var/lib/polkit</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max/>
+        <min/>
+        <warn/>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>478</uid>
+      <user_password>!</user_password>
+      <username>polkitd</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>user for rpcbind</fullname>
+      <gid>65534</gid>
+      <home>/var/lib/empty</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max/>
+        <min/>
+        <warn/>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>481</uid>
+      <user_password>!</user_password>
+      <username>rpc</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>bin</fullname>
+      <gid>1</gid>
+      <home>/bin</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>1</uid>
+      <user_password>!</user_password>
+      <username>bin</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>nobody</fullname>
+      <gid>65534</gid>
+      <home>/var/lib/nobody</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/bin/bash</shell>
+      <uid>65534</uid>
+      <user_password>!</user_password>
+      <username>nobody</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>Daemon</fullname>
+      <gid>2</gid>
+      <home>/sbin</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>2</uid>
+      <user_password>!</user_password>
+      <username>daemon</username>
+    </user>
+    <user>
+      <authorized_keys config:type="list"/>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>root</fullname>
+      <gid>0</gid>
+      <home>/root</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max/>
+        <min/>
+        <warn/>
+      </password_settings>
+      <shell>/bin/bash</shell>
+      <uid>0</uid>
+      <user_password>$6$DS63/bA7dTwq$eW2NEpq9Mg9okskvUtosYgOKPUkmq8hbf48GMloClVNk32mFEXTKGkYg11gCI9HIMvEhQ3kcCkzHY5x5WBkM..</user_password>
+      <username>root</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>systemd Time Synchronization</fullname>
+      <gid>483</gid>
+      <home>/</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>483</uid>
+      <user_password>!!</user_password>
+      <username>systemd-timesync</username>
+    </user>
+    <user>
+      <encrypted config:type="boolean">true</encrypted>
+      <fullname>NFS statd daemon</fullname>
+      <gid>65533</gid>
+      <home>/var/lib/nfs</home>
+      <home_btrfs_subvolume config:type="boolean">false</home_btrfs_subvolume>
+      <password_settings>
+        <expire/>
+        <flag/>
+        <inact/>
+        <max>99999</max>
+        <min>0</min>
+        <warn>7</warn>
+      </password_settings>
+      <shell>/sbin/nologin</shell>
+      <uid>480</uid>
+      <user_password>!</user_password>
+      <username>statd</username>
+    </user>
+  </users>
+</profile>
