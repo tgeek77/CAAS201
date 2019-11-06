@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: smt.example.com:5000/nginx:1.7.9
+        image: nginx:1.7.9
         ports:
         - containerPort: 80
