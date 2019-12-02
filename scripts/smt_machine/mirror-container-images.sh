@@ -8,6 +8,7 @@ gcr.io/google_containers/kubernetes-dashboard-amd64:v1.10.0
 gcr.io/google_containers/hpa-example:v1.13.1
 k8s.gcr.io/cluster-autoscalerv:v1.13.1
 spotinst/kubernetes-cluster-autoscaler:0.6.0
+quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.26.1
 mhausenblas/simpleservice:0.5.0
 nginx:1.12.0
 nginx:1.7.9
