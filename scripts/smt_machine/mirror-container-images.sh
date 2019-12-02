@@ -1,9 +1,13 @@
 #!/bin/bash
 # Current CaaSP Images: 1.15.2
 # "skuba cluster images" to get the latest bootstrap images
+# add smt.example.com:5000/ to any image to download offline
 REGISTRY="smt.example.com"
 CONTAINER_LIST="
 gcr.io/google_containers/kubernetes-dashboard-amd64:v1.10.0
+gcr.io/google_containers/hpa-example:v1.13.1
+k8s.gcr.io/cluster-autoscalerv:v1.13.1
+spotinst/kubernetes-cluster-autoscaler:0.6.0
 mhausenblas/simpleservice:0.5.0
 nginx:1.12.0
 nginx:1.7.9
@@ -11,7 +15,6 @@ nginx:1.9.0
 jsevans/tomcat-opensuse:latest
 kope.io/k8s-1.8-debian-jessie-amd64-hvm-ebs-2018-01-14
 busybox
-gcr.io/google_containers/hpa-example
 gcr.io/google_containers/busybox:1.24
      registry.suse.com/caasp/v4/pause:3.1
      registry.suse.com/caasp/v4/skuba-tooling:0.1.0

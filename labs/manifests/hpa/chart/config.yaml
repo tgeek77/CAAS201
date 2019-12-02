@@ -73,7 +73,7 @@ sslCertHostPath: /etc/ssl/certs/ca-certificates.crt
 cloudConfigPath: /etc/gce.conf
 
 image:
-  repository: k8s.gcr.io/cluster-autoscaler
+  repository: smt.example.com:5000/k8s.gcr.io/cluster-autoscaler
   tag: v1.13.1
   pullPolicy: IfNotPresent
 
@@ -170,7 +170,7 @@ spotinst:
   account: ""
   token: ""
   image:
-    repository: spotinst/kubernetes-cluster-autoscaler
+    repository: smt.example.com:5000/spotinst/kubernetes-cluster-autoscaler
     tag: 0.6.0
     pullPolicy: IfNotPresent
 
@@ -490,4 +490,3 @@ Containers:
 #### PodSecurityPolicy
 
 Though enough for the majority of installations, the default PodSecurityPolicy _could_ be too restrictive depending on the specifics of your release. Please make sure to check that the template fits with any customizations made or disable it by setting `rbac.pspEnabled` to `false`.
-
