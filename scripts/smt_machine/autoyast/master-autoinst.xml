@@ -104,7 +104,16 @@ XOO7PD4GSNI8MHUA+oUPWTUv+GFJRdRyeeNQvRpnHIBUWC2nBNVg6HX7527nOkuA
 uCbHFBhq1boq0dnv18Lf8BvpYRYPMYAySM2L82er2/lh0WwU6g==
 -----END CERTIFICATE-----
 " > /etc/pki/trust/anchors/smt_ca.pem
-/usr/sbin/update-ca-certificates]]>
+/usr/sbin/update-ca-certificates
+
+# Add Preconfigured /etc/containers/registries.conf
+cho "[[registry]]
+blocked = false
+insecure = false
+location = "smt.example.com:5000"
+prefix = "smt.example.com:5000"
+" > /etc/containers/registries.conf
+]]>
 
       </source>
     </script>
