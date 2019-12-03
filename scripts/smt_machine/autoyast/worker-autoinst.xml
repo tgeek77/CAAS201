@@ -107,7 +107,7 @@
         /usr/sbin/update-ca-certificates
 
         # Add Preconfigured /etc/containers/registries.conf
-        cho "[[registry]]
+        echo "[[registry]]
         blocked = false
         insecure = false
         location = "smt.example.com:5000"
