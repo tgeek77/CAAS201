@@ -107,12 +107,25 @@
         /usr/sbin/update-ca-certificates
 
         # Add Preconfigured /etc/containers/registries.conf
-        echo "[[registry]]
-        blocked = false
-        insecure = false
-        location = "smt.example.com:5000"
-        prefix = "smt.example.com:5000"
-        " >> /etc/containers/registries.conf
+        cp /etc/containers/registries.conf /etc/containers/registries.conf.original
+        echo '
+        [[registry]]
+        prefix = "registry.suse.com"
+        location = "smt.example.com:5000/registry.suse.com"
+        [[registry]]
+        prefix = "docker.io"
+        location = "smt.example.com:5000/docker.io"
+        [[registry]]
+        prefix = "quay.io"
+        location = "smt.example.com:5000/quay.io"
+        [[registry]]
+        prefix = "k8s.gcr.io"
+        location = "smt.example.com:5000/k8s.gcr.io"
+        [[registry]]
+        prefix = "gcr.io"
+        location = "smt.example.com:5000/gcr.io"
+        ' > /etc/containers/registries.conf
+
         ]]>
       </source>
     </script>
