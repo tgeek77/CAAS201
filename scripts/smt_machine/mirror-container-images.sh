@@ -1,22 +1,25 @@
 #!/bin/bash
 # Current CaaSP Images: 1.15.2
 # "skuba cluster images" to get the latest bootstrap images
-# add smt.example.com:5000/ to any image to download offline
 REGISTRY="smt.example.com"
 CONTAINER_LIST="
 gcr.io/google_containers/kubernetes-dashboard-amd64:v1.10.0
-gcr.io/google_containers/hpa-example:v1.13.1
-k8s.gcr.io/cluster-autoscalerv:v1.13.1
-spotinst/kubernetes-cluster-autoscaler:0.6.0
-quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.26.1
 mhausenblas/simpleservice:0.5.0
 nginx:1.12.0
 nginx:1.7.9
 nginx:1.9.0
 jsevans/tomcat-opensuse:latest
-kope.io/k8s-1.8-debian-jessie-amd64-hvm-ebs-2018-01-14
 busybox
+gcr.io/google_containers/hpa-example
 gcr.io/google_containers/busybox:1.24
+gcr.io/kubernetes-helm/tiller:v2.14.2
+quay.io/external_storage/nfs-client-provisioner:v3.1.0-k8s1.11
+docker.io/metallb/controller:v0.8.1
+docker.io/metallb/speaker:v0.8.1
+
+registry.suse.com/sles12/nginx-ingress-controller:0.15.0
+registry.suse.com/sles12/default-http-backend:0.15.0
+
      registry.suse.com/caasp/v4/pause:3.1
      registry.suse.com/caasp/v4/skuba-tooling:0.1.0
      registry.suse.com/caasp/v4/hyperkube:v1.15.2
