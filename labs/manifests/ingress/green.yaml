@@ -1,0 +1,24 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: green-app
+  labels:
+    app: blue
+spec:
+  containers:
+    - name: blue-app
+      image: hashicorp/http-echo
+      args:
+        - "-text=blue"
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: blue-service
+spec:
+  selector:
+    app: blue
+  ports:
+    - port: 5678 # Default port for image
