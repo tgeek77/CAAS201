@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: caasp-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /red
+          backend:
+            serviceName: red-service
+            servicePort: 5678
+        - path: /green
+          backend:
+            serviceName: green-service
+            servicePort: 5678
+        - path: /blue
+          backend:
+            serviceName: blue-service
+            servicePort: 5678

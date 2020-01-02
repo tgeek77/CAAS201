@@ -11,7 +11,7 @@ serviceAccount:
 # These services are exposed on each node
 controller:
   service:
-    enableHttp: false
+    enableHttp: true
     type: NodePort
     nodePorts:
       https: 30443

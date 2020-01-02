@@ -4,18 +4,19 @@
 REGISTRY="smt.example.com"
 CONTAINER_LIST="
 gcr.io/google_containers/kubernetes-dashboard-amd64:v1.10.0
-mhausenblas/simpleservice:0.5.0
-nginx:1.12.0
-nginx:1.7.9
-nginx:1.9.0
-jsevans/tomcat-opensuse:latest
-busybox
+docker.io/mhausenblas/simpleservice:0.5.0
+docker.io/nginx:1.12.0
+docker.io/nginx:1.7.9
+docker.io/nginx:1.9.0
+docker.io/jsevans/tomcat-opensuse:latest
+docker.io/busybox
 gcr.io/google_containers/hpa-example
 gcr.io/google_containers/busybox:1.24
 gcr.io/kubernetes-helm/tiller:v2.14.2
 quay.io/external_storage/nfs-client-provisioner:v3.1.0-k8s1.11
 docker.io/metallb/controller:v0.8.1
 docker.io/metallb/speaker:v0.8.1
+docker.io/hashicorp/http-echo
 
 registry.suse.com/sles12/nginx-ingress-controller:0.15.0
 registry.suse.com/sles12/default-http-backend:0.15.0
