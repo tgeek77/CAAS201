@@ -124,8 +124,6 @@ location = "smt.example.com:5000/k8s.gcr.io"
 [[registry]]
 prefix = "gcr.io"
 location = "smt.example.com:5000/gcr.io"
-[registries.search]
-registries = ['docker.io']
 ' > /etc/containers/registries.conf
 ]]>
 
