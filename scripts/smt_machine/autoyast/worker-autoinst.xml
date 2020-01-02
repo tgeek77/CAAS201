@@ -127,6 +127,11 @@ location = "smt.example.com:5000/k8s.gcr.io"
 prefix = "gcr.io"
 location = "smt.example.com:5000/gcr.io"
 ' > /etc/containers/registries.conf
+# register VM
+SUSEConnect -p caasp/4.0/x86_64 --url http://smt.example.com
+SUSEConnect -p SLES/15.1/x86_64 --url http://smt.example.com
+SUSEConnect -p sle-module-basesystem/15.1/x86_64 --url http://smt.example.com
+SUSEConnect -p sle-module-containers/15.1/x86_64 --url http://smt.example.com
 ]]>
       </source>
     </script>
