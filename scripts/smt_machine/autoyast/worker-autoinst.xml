@@ -132,6 +132,8 @@ SUSEConnect -p caasp/4.0/x86_64 --url http://smt.example.com
 SUSEConnect -p SLES/15.1/x86_64 --url http://smt.example.com
 SUSEConnect -p sle-module-basesystem/15.1/x86_64 --url http://smt.example.com
 SUSEConnect -p sle-module-containers/15.1/x86_64 --url http://smt.example.com
+# patch VM
+zypper -n up
 ]]>
       </source>
     </script>
