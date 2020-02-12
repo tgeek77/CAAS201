@@ -9,7 +9,7 @@ docker.io/nginx:1.12.0
 docker.io/nginx:1.7.9
 docker.io/nginx:1.9.0
 docker.io/jsevans/tomcat-opensuse:latest
-docker.io/busybox
+docker.io/busybox:1.24
 gcr.io/google_containers/hpa-example
 gcr.io/google_containers/busybox:1.24
 gcr.io/kubernetes-helm/tiller:v2.16.1
