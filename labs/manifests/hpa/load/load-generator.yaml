@@ -1,23 +1,29 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: load-generator
+  labels:
+    app: nginx
 spec:
-  replicas: 1
+  replicas: 3
   strategy:
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
     type: RollingUpdate
+  selector:
+    matchLabels:
+      app: nginx
   template:
     metadata:
       labels:
-        name: load-generator
+        app: nginx
     spec:
       containers:
-      - image: smt.example.com:5000/busybox
-        name: busybox
+      - name: busybox
+        image: smt.example.com:/busybox
         command:
           - sh
           - -c
           - 'while true; do wget -q -O- http://php-apache.default.svc.cluster.local; done'
+

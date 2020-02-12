@@ -12,7 +12,7 @@ docker.io/jsevans/tomcat-opensuse:latest
 docker.io/busybox
 gcr.io/google_containers/hpa-example
 gcr.io/google_containers/busybox:1.24
-gcr.io/kubernetes-helm/tiller:v2.14.2
+gcr.io/kubernetes-helm/tiller:v2.16.1
 quay.io/external_storage/nfs-client-provisioner:v3.1.0-k8s1.11
 docker.io/metallb/controller:v0.8.1
 docker.io/metallb/speaker:v0.8.1

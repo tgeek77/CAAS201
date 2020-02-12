@@ -1,11 +1,14 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
+  selector:
+    matchLabels:
+      app: nginx
   replicas: 4
   revisionHistoryLimit: 5
-  minReadySeconds: 20 
+  minReadySeconds: 20
   strategy:
     type: RollingUpdate
     rollingUpdate:

@@ -1,11 +1,8 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: mysql
 spec:
-  selector:
-    matchLabels:
-      app: mysql
   strategy:
     type: Recreate
   template:
