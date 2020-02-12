@@ -25,7 +25,7 @@ version: 0.28.4
 controller:
   name: controller
   image:
-    repository: registry.suse.com/sles12/nginx-ingress-controller
+    repository: smt.example.com:5000/registry.suse.com/sles12/nginx-ingress-controller
     tag: "0.15.0"
     pullPolicy: IfNotPresent
     runAsUser: 33
@@ -659,4 +659,3 @@ controller:
     annotations:
       domainName: "kubernetes-example.com"
 ```
-
