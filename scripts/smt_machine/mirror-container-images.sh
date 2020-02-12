@@ -20,7 +20,7 @@ docker.io/hashicorp/http-echo
 opensuse/leap
 registry.suse.com/sles12/nginx-ingress-controller:0.15.0
 registry.suse.com/sles12/default-http-backend:0.15.0
-
+gcr.io/google-samples/node-hello:1.0
 registry.suse.com/caasp/v4/hyperkube:v1.15.2
 registry.suse.com/caasp/v4/etcd:3.3.11
 registry.suse.com/caasp/v4/coredns:1.3.1
