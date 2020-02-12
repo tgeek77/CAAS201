@@ -17,7 +17,7 @@ quay.io/external_storage/nfs-client-provisioner:v3.1.0-k8s1.11
 docker.io/metallb/controller:v0.8.1
 docker.io/metallb/speaker:v0.8.1
 docker.io/hashicorp/http-echo
-
+opensuse/leap
 registry.suse.com/sles12/nginx-ingress-controller:0.15.0
 registry.suse.com/sles12/default-http-backend:0.15.0
 
