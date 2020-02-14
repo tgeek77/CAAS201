@@ -8,4 +8,8 @@ label harddisk
   menu label Local Hard Disk
   localboot 0
 
+label Generic
+  menu label Hello Stranger
+  kernel caasp/linux
+  append load_ramdisk=1 initrd=caasp/initrd netsetup=dhcp install=http://192.168.111.2/repo/SUSE/Install/SUSE-CAASP/x86_64
 
