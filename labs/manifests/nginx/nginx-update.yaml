@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  labels:
+    env: "app"
+    owner: nginx
 spec:
   selector:
     matchLabels:
@@ -14,6 +17,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: smt.example.com:5000/nginx:1.9.0
+        image: smt.example.com:5000/docker.io/nginx:1.9.0
         ports:
         - containerPort: 80

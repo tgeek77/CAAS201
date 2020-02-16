@@ -1,0 +1,11 @@
+apiVersion: kubeadm.k8s.io/v1beta2
+controlPlane:
+  localAPIEndpoint: {}
+discovery:
+  bootstrapToken:
+    apiServerEndpoint: master01.example.com:6443
+    token: ""
+    unsafeSkipCAVerification: true
+kind: JoinConfiguration
+nodeRegistration:
+  taints: null

@@ -2,18 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  labels:
+    env: "app"
+    owner: nginx
 spec:
   selector:
     matchLabels:
       app: nginx
   replicas: 4
   revisionHistoryLimit: 5
-  minReadySeconds: 20
+  minReadySeconds: 20 
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 25%
-      maxSurge: 2
+   type: RollingUpdate
+   rollingUpdate:
+    maxUnavailable: 25%
+    maxSurge: 2
   template:
     metadata:
       labels:
@@ -21,6 +24,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: smt.example.com:5000/nginx:1.12.0
+        image: smt.example.com:5000/docker.io/nginx:1.12.0
         ports:
         - containerPort: 80
