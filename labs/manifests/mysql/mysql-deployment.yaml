@@ -14,7 +14,7 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: smt.example.com:5000/mysql:5.6
+      - image: smt.example.com:5000/docker.io/mysql:5.6
         name: mysql
         env:
           # Use secret in real usage

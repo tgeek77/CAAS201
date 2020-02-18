@@ -1,19 +1,22 @@
 # This mounts the nfs volume claim into /mnt and continuously
 # overwrites /mnt/index.html with the time and hostname of the pod.
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nfs-busybox
 spec:
+  selector:
+    matchLabels:
+      app: nfs-busybox
   replicas: 1
   template:
     metadata:
       labels:
-        name: nfs-busybox
+        app: nfs-busybox
     spec:
       containers:
-      - image: smt.example.com:5000/busybox
+      - image: smt.example.com:5000/docker.io/busybox
         command:
           - sh
           - -c

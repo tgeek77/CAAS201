@@ -1,20 +1,23 @@
 # This pod mounts the nfs volume claim into /usr/share/nginx/html and
 # serves a simple web page.
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nfs-web
 spec:
+  selector:
+   matchLabels:
+     app: nfs-web
   replicas: 1
   template:
     metadata:
       labels:
-        app: web-frontend
+        app: nfs-web
     spec:
       containers:
       - name: web
-        image: smt.example.com:5000/nginx:1.9.0
+        image: smt.example.com:5000/docker.io/nginx:1.9.0
         ports:
           - name: web
             containerPort: 80

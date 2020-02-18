@@ -8,5 +8,5 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 192.168.110.2
+    server: 192.168.111.2
     path: "/export/vol-01"
