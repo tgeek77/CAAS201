@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: nginx-bad
-    image: smt.example.com:5000/nginx
+    image: smt.example.com:5000/docker.io/nginx:1.12.0
     resources:
       limits:
         cpu: "3"
