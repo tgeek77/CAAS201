@@ -3,6 +3,8 @@
 # "skuba cluster images" to get the latest bootstrap images
 REGISTRY="smt.example.com"
 CONTAINER_LIST="
+gcr.io/google-samples/node-hello:1.0
+gcr.io/google_containers/metrics-server-amd64:v0.3.6
 gcr.io/google_containers/kubernetes-dashboard-amd64:v1.10.0
 docker.io/mhausenblas/simpleservice:0.5.0
 docker.io/nginx:1.12.0
@@ -17,11 +19,10 @@ quay.io/external_storage/nfs-client-provisioner:v3.1.0-k8s1.11
 docker.io/metallb/controller:v0.8.1
 docker.io/metallb/speaker:v0.8.1
 docker.io/hashicorp/http-echo
-gcr.io/google-samples/node-hello:1.0
-opensuse/leap 
+docker.io/opensuse/leap 
 registry.suse.com/sles12/nginx-ingress-controller:0.15.0
 registry.suse.com/sles12/default-http-backend:0.15.0
-gcr.io/google_containers/metrics-server-amd64:v0.3.6
+docker.io/mysql:5.6
 registry.suse.com/caasp/v4/hyperkube:v1.15.2
 registry.suse.com/caasp/v4/etcd:3.3.11
 registry.suse.com/caasp/v4/coredns:1.3.1
