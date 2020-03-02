@@ -8,9 +8,9 @@ serviceAccount:
   name: nginx-ingress
 
 # Publish services on port HTTPS/443
-# These services are exposed on the node with IP 192.168.111.110
+# These services are exposed on the node with IP 192.168.111.14
 controller:
   service:
-    enableHttp: false
+    enableHttp: true
     externalIPs:
-      - 192.168.111.110
+      - 192.168.111.14
