@@ -1,6 +1,6 @@
 #!/bin/bash
+# Current CaaSP Images: 1.15.2
 # "skuba cluster images" to get the latest bootstrap images
-# Images from imagelist.txt after "helm fetch <chart>"
 REGISTRY="smt.example.com"
 REMOTE="registry.suse.com/cap"
 CONTAINER_LIST="
@@ -26,5 +26,5 @@ echo "-------------------------------------------------------"
 for IMAGE in ${CONTAINER_LIST}
 do
   echo "-${IMAGE}"
-  skopeo copy --dest-tls-verify=false docker://${REMOTE}/${IMAGE} docker://${REGISTRY}:5000/${IMAGE}
+  skopeo copy --dest-tls-verify=false docker://${REMOTE}/${IMAGE} docker://${REGISTRY}:5000/${REMOTE}/${IMAGE}
 done
