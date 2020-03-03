@@ -1,6 +1,8 @@
 #!/bin/bash
 # Current CaaSP Images: 1.15.2
 # "skuba cluster images" to get the latest bootstrap images
+# Images from imagelist.txt after helm fetch <chart>
+# Tag version helm inspect <chart>. The tag version is at the top.
 REGISTRY="smt.example.com"
 REMOTE="registry.suse.com/cap"
 CONTAINER_LIST="
