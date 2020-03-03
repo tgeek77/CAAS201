@@ -1,0 +1,4 @@
+stratos-console:2.7.0-35f5964bd-cap
+stratos-jetstream:2.7.0-35f5964bd-cap
+stratos-mariadb:2.7.0-35f5964bd-cap
+stratos-postflight-job:2.7.0-35f5964bd-cap
