@@ -1,6 +1,11 @@
 #!/bin/bash
 # "skuba cluster images" to get the latest bootstrap images
+<<<<<<< HEAD
 # Images from imagelist.txt after "helm fetch <chart>"
+=======
+# Images from imagelist.txt after helm fetch <chart>
+# Tag version helm inspect <chart>. The tag version is at the top.
+>>>>>>> 9c6ba2b59641bd524c0a2d875e886af7576f030b
 REGISTRY="smt.example.com"
 REMOTE="registry.suse.com/cap"
 CONTAINER_LIST="
