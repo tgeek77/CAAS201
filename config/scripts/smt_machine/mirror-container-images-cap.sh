@@ -1,6 +1,6 @@
 #!/bin/bash
 # "skuba cluster images" to get the latest bootstrap images
-# Images from imagelist.txt after "helm fetch <chart>
+# Images from imagelist.txt after "helm fetch <chart>"
 REGISTRY="smt.example.com"
 REMOTE="registry.suse.com/cap"
 CONTAINER_LIST="
