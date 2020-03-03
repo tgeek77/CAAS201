@@ -16,7 +16,7 @@ useLb: false
 console:
   cookieDomain:
   # externalIP deprecated - use console.service.externalIPs
-  externalIP: 127.0.0.1
+# externalIP: 127.0.0.1
   backendLogLevel: info
   ssoLogin: false
   ssoOptions:
@@ -29,7 +29,7 @@ console:
     loadBalancerIP:
     loadBalancerSourceRanges: []
     servicePort: 443
-    nodePort: 32000
+    nodePort: 30000
     type: NodePort
     externalName:
     ingress:
@@ -57,7 +57,7 @@ console:
     http:
       enabled: true
       servicePort: 80
-      # nodePort: 33000
+      nodePort: 30001
 
   # Name of config map that provides the template files for user invitation emails
   templatesConfigMapName:
@@ -69,10 +69,10 @@ console:
   migrateVolumes: false
   
   # Enable/disable Tech Preview
-  techPreview: false
+  techPreview: true
 
   # Use local admin user instead of UAA - set to a password to enable
-  localAdminPassword: ~
+  localAdminPassword: linux
 
 images:
   console: stratos-console
@@ -152,9 +152,9 @@ kube:
   external_console_https_port: 8443
   storage_class:
     persistent:
-  organization: cap
+  organization: cap 
   registry:
-    hostname: registry.suse.com
+    hostname: smt.example.com:5000/registry.suse.com
     username:
     password:
     email: default
