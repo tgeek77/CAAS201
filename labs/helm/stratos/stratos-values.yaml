@@ -34,7 +34,7 @@ console:
     externalName:
     ingress:
       ## If true, Ingress will be created
-      enabled: false
+      enabled: true
 
       ## Additional annotations
       annotations: {}
@@ -44,15 +44,15 @@ console:
 
       ## Host for the ingress
       # Defaults to console.[env.Domain] if env.Domain is set and host is not
-      host:
+      host: stratos.example.com
 
       # Name of secret containing TLS certificate
-      secretName:
+      secretName: stratos-ingress-secret
 
       # crt and key for TLS Certificate (this chart will create the secret based on these)
       tls:
-        crt:
-        key:
+        crt: 
+        key: 
 
     http:
       enabled: false
