@@ -29,8 +29,8 @@ console:
     loadBalancerIP:
     loadBalancerSourceRanges: []
     servicePort: 443
-    nodePort: 30000
-    type: NodePort
+    # nodePort: 30000
+    type: ClusterIP
     externalName:
     ingress:
       ## If true, Ingress will be created
@@ -55,9 +55,9 @@ console:
         key:
 
     http:
-      enabled: true
+      enabled: false
       servicePort: 80
-      nodePort: 30001
+      # nodePort: 30001
 
   # Name of config map that provides the template files for user invitation emails
   templatesConfigMapName:
@@ -69,10 +69,10 @@ console:
   migrateVolumes: false
   
   # Enable/disable Tech Preview
-  techPreview: true
+  techPreview: false
 
   # Use local admin user instead of UAA - set to a password to enable
-  localAdminPassword: linux
+  localAdminPassword: ~
 
 images:
   console: stratos-console
@@ -152,9 +152,9 @@ kube:
   external_console_https_port: 8443
   storage_class:
     persistent:
-  organization: cap 
+  organization: cap
   registry:
-    hostname: smt.example.com:5000/registry.suse.com
+    hostname: registry.suse.com
     username:
     password:
     email: default
