@@ -1,0 +1,1 @@
+V	201105133124Z		01	unknown	/C=CZ/ST=HM/O=example.com/OU=training/CN=smt.example.com/emailAddress=admin@example.com
