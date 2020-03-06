@@ -70,10 +70,10 @@ console:
   migrateVolumes: false
 
   # Enable/disable Tech Preview
-  techPreview: false
+  techPreview: true
 
   # Use local admin user instead of UAA - set to a password to enable
-  localAdminPassword: ~
+  localAdminPassword: linux
 
 images:
   console: stratos-console
@@ -155,11 +155,11 @@ kube:
     persistent:
   organization: cap
   registry:
-    hostname: registry.suse.com
+    hostname: smt.example.com:5000/registry.suse.com
     username:
     password:
     email: default
 services:
   loadbalanced: false
 metrics:
-  enabled: false
+  enabled: true
