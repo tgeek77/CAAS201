@@ -3,6 +3,9 @@
 # "skuba cluster images" to get the latest bootstrap images
 REGISTRY="smt.example.com"
 CONTAINER_LIST="
+docker.io/kubernetesui/metrics-scraper:v1.0.2
+docker.io/kubernetesui/dashboard:v2.0.0-rc2
+docker.io/nginxdemos/nginx-hello:plain-text
 gcr.io/google-samples/node-hello:1.0
 gcr.io/google_containers/metrics-server-amd64:v0.3.6
 gcr.io/google_containers/kubernetes-dashboard-amd64:v1.10.0
@@ -23,28 +26,7 @@ docker.io/opensuse/leap
 registry.suse.com/sles12/nginx-ingress-controller:0.15.0
 registry.suse.com/sles12/default-http-backend:0.15.0
 docker.io/mysql:5.6
-registry.suse.com/caasp/v4/hyperkube:v1.15.2
-registry.suse.com/caasp/v4/etcd:3.3.11
-registry.suse.com/caasp/v4/coredns:1.3.1
-registry.suse.com/caasp/v4/pause:3.1
-registry.suse.com/caasp/v4/skuba-tooling:0.1.0
-registry.suse.com/caasp/v4/caasp-dex:2.16.0
-registry.suse.com/caasp/v4/gangway:3.1.0-rev4
-registry.suse.com/caasp/v4/kured:1.2.0-rev4
-registry.suse.com/caasp/v4/cilium-init:1.5.3
-registry.suse.com/caasp/v4/cilium-operator:1.5.3
-registry.suse.com/caasp/v4/cilium:1.5.3
-registry.suse.com/caasp/v4/skuba-tooling:0.1.0
-registry.suse.com/caasp/v4/hyperkube:v1.16.2
-registry.suse.com/caasp/v4/etcd:3.3.15
-registry.suse.com/caasp/v4/coredns:1.6.2
-registry.suse.com/caasp/v4/pause:3.1
-registry.suse.com/caasp/v4/gangway:3.1.0-rev4
-registry.suse.com/caasp/v4/kured:1.2.0-rev4
-registry.suse.com/caasp/v4/cilium-init:1.5.3
-registry.suse.com/caasp/v4/cilium-operator:1.5.3
-registry.suse.com/caasp/v4/cilium:1.5.3
-registry.suse.com/caasp/v4/caasp-dex:2.16.0
+
 "
 
 echo
