@@ -1,0 +1,14 @@
+wordpressUsername: admin
+wordpressPassword: password123
+serviceType: NodePort
+# This is the Wordpress Persistent Storage 
+persistence:
+  enabled: true
+  storageClass: nfs-client
+# This is the MariaDB Persistent Storage
+mariadb:
+ master:
+    persistence:
+       enabled: true
+       storageClass: nfs-client
+

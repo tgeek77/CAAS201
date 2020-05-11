@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-vol-01
+  name: mysql-pv
 spec:
   capacity:
     storage: 20Mi
@@ -9,4 +9,4 @@ spec:
     - ReadWriteMany
   nfs:
     server: 192.168.111.2
-    path: "/export/vol-01"
+    path: "/export/mysql-vol"
