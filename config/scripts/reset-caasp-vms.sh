@@ -63,7 +63,7 @@ reset_install_vms() {
     virsh define ${VM_BASE_DIR}/${COURSE_ID}-${VM}/${COURSE_ID}-${VM}${APPEND}.xml
 
     sudo chmod 777 ${VM_BASE_DIR}/${COURSE_ID}-${VM}/${COURSE_ID}-${VM}.qcow2
-    ~/course_files/${COURSE_ID}/scripts/reset-vm-disk-image.sh ${COURSE_ID}-${VM}
+    ~/course_files/${COURSE_ID}/config/scripts/reset-vm-disk-image.sh ${COURSE_ID}-${VM}
 
 
     case ${VM} in

@@ -1,0 +1,6 @@
+export MINIO_ACCESS_KEY=abcdefg
+export MINIO_SECRET_KEY=123456789
+export MINIO_REGION_NAME="example"
+
+/root/bin/minio server /bucket &
+/root/bin/mc config host add Velero http://127.0.0.1:9000 abcdefg 123456789

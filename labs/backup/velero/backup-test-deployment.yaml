@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backup-test
+  labels:
+   env: "app"
+   owner: nginx
+spec:
+  selector:
+    matchLabels:
+      app: backup-test
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: backup-test
+    spec:
+      containers:
+      - name: nginx
+        image: smt.example.com:5000/docker.io/nginx:1.7.9
+        ports:
+        - containerPort: 80

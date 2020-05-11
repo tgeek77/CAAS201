@@ -1,5 +1,5 @@
 #!/bin/bash
-# Image versions are tied to Skuba. 
+# Image versions are tied to Skuba.
 # Current Skuba Version: 1.2.4
 # Image version: 1.16.2
 # "skuba cluster images" to get the latest bootstrap images
@@ -17,6 +17,8 @@ cilium:1.5.3
 caasp-dex:2.16.0
 gangway:3.1.0-rev4
 kured:1.2.0-rev4
+velero:1.3.1
+velero-plugin-for-aws:1.0.1
 "
 
 echo

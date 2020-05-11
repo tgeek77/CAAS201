@@ -132,6 +132,7 @@ SUSEConnect -p sle-module-basesystem/15.1/x86_64 --url http://smt.example.com
 SUSEConnect -p sle-module-containers/15.1/x86_64 --url http://smt.example.com
 # patch VM
 zypper -n up
+zypper -n in etcdctl
 ]]>
 
       </source>

@@ -26,7 +26,7 @@ docker.io/opensuse/leap
 registry.suse.com/sles12/nginx-ingress-controller:0.15.0
 registry.suse.com/sles12/default-http-backend:0.15.0
 docker.io/mysql:5.6
-
+registry.suse.com/caasp/v4/rsyslog:8.39.0
 "
 
 echo
