@@ -1,0 +1,15 @@
+# Enable the creation of pod security policy
+podSecurityPolicy:
+  enabled: false
+
+# Create a specific service account
+serviceAccount:
+  create: true
+  name: monitoring-ingress
+
+# Publish services on port HTTPS/30443
+# These services are exposed on each node
+controller:
+  service:
+    enableHttp: true
+    type: LoadBalancer
