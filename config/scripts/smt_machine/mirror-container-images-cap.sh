@@ -9,6 +9,14 @@ stratos-jetstream:2.7.0-35f5964bd-cap
 stratos-mariadb:2.7.0-35f5964bd-cap
 stratos-postflight-job:2.7.0-35f5964bd-cap
 
+stratos-fdbdoclayer:3.1.0-0d657242b-cap
+stratos-fdbserver:3.1.0-0d657242b-cap
+stratos-chartsync:3.1.0-0d657242b-cap
+stratos-config-init:3.1.0-0d657242b-cap
+stratos-mariadb:3.1.0-0d657242b-cap
+stratos-console:3.1.0-0d657242b-cap
+stratos-jetstream:3.1.0-0d657242b-cap
+
 stratos-metrics-cf-exporter:1.1.2-85daaa2-cap
 stratos-metrics-firehose-exporter:1.1.2-85daaa2-cap
 stratos-metrics-firehose-init:1.1.2-85daaa2-cap

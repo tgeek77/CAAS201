@@ -27,6 +27,8 @@ registry.suse.com/sles12/nginx-ingress-controller:0.15.0
 registry.suse.com/sles12/default-http-backend:0.15.0
 docker.io/mysql:5.6
 registry.suse.com/caasp/v4/rsyslog:8.39.0
+docker.io/bitnami/mariadb:10.3.22-debian-10-r27
+docker.io/bitnami/wordpress:5.3.2-debian-10-r32
 "
 
 echo
