@@ -83,5 +83,6 @@ server:
 ## listed in serverFiles will be mounted into the server pod.
 ## See configuration options
 ## https://prometheus.io/docs/prometheus/latest/configuration/configuration/
-#serverFiles:
-#  prometheus.yml:
+  serverFiles:
+    prometheus-rules.yaml
+

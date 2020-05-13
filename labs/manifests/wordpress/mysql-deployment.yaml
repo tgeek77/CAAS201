@@ -12,16 +12,19 @@ spec:
     tier: mysql
   clusterIP: None
 ---
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
-  name: mysql-pv
+  name: mysql-pv-claim
+  labels:
+    app: wordpress
 spec:
+  storageClassName: mysql
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 20Mi
+      storage: 1Gi
 ---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment

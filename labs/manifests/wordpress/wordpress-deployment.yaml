@@ -19,6 +19,7 @@ metadata:
   labels:
     app: wordpress
 spec:
+  storageClassName: wp
   accessModes:
     - ReadWriteOnce
   resources:
